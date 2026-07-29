@@ -1,39 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arasmas Labs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0d1117;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
+<title>Project Theseus | Arasmas Labs</title>
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-        }
+<style>
 
-        p {
-            color: #b8b8b8;
-            font-size: 1.2rem;
-        }
-    </style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+header{
+    padding:25px;
+    text-align:center;
+    border-bottom:1px solid #222;
+}
+
+header h1{
+    font-size:3rem;
+}
+
+header p{
+    color:#9aa4b2;
+    margin-top:10px;
+}
+
+.hero{
+    min-height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    line-height:1.7;
+    color:#c8d1dc;
+    font-size:1.2rem;
+}
+
+.button{
+    margin-top:40px;
+    padding:15px 35px;
+    background:#ffffff;
+    color:#111;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 30px;
+}
+
+.card{
+    background:#161b22;
+    border:1px solid #30363d;
+    border-radius:15px;
+    padding:30px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#888;
+    border-top:1px solid #222;
+}
+
+</style>
+
 </head>
 
 <body>
-    <div>
-        <h1>Project Theseus</h1>
-        <p>Personal, Private, Modular AI Platform.</p>
-    </div>
+
+<header>
+
+<h1>Project Theseus</h1>
+
+<p>
+An Arasmas Labs Initiative
+</p>
+
+</header>
+
+<div class="hero">
+
+<h2>
+Building Your Personal AI.
+</h2>
+
+<p>
+Project Theseus is a modular artificial intelligence platform designed to place complete control back into the hands of its owner. Every capability is built as an independent system that can evolve without replacing the whole.
+</p>
+
+<a class="button" href="#hephaestus">
+Explore the Platform
+</a>
+
+</div>
+
+<section id="hephaestus">
+
+<div class="card">
+
+<h2>Project Hephaestus</h2>
+
+<br>
+
+<p>
+
+Project Hephaestus serves as the physical engineering division of Project Theseus, bringing AI into the real world through robotics, automation, manufacturing, and intelligent hardware.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Arasmas Labs
+
+</footer>
+
 </body>
 </html>
