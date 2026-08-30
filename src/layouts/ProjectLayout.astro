@@ -1,0 +1,137 @@
+---
+import MainLayout from "./MainLayout.astro";
+
+const {
+  title,
+  subtitle = "",
+  status = "",
+  lastUpdated = "",
+  heroImage = "",
+  heroAlt = "",
+} = Astro.props;
+---
+
+<MainLayout title={`${title} | Arasmas Labs`}>
+  {heroImage && (
+    <section class="project-hero">
+      <img src={heroImage} alt={heroAlt || title} />
+    </section>
+  )}
+
+  <main class="project-page">
+    {!heroImage && (
+      <section class="project-header">
+        <div>
+          <p class="project-label">ARASMAS LABS PROJECT</p>
+          <h1>{title}</h1>
+
+          {subtitle && (
+            <p class="project-subtitle">
+              {subtitle}
+            </p>
+          )}
+        </div>
+
+        <div class="project-meta">
+          {status && (
+            <p>
+              <span>Status</span>
+              {status}
+            </p>
+          )}
+
+          {lastUpdated && (
+            <p>
+              <span>Last Updated</span>
+              {lastUpdated}
+            </p>
+          )}
+        </div>
+      </section>
+    )}
+
+    <section class="project-content">
+      <slot />
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+.project-hero {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-background);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.project-hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+  .project-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .project-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: var(--space-5);
+    align-items: end;
+
+    padding-bottom: var(--space-5);
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .project-label {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .project-subtitle {
+    max-width: 700px;
+    margin: var(--space-3) 0 0;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  .project-meta {
+    min-width: 180px;
+  }
+
+  .project-meta p {
+    margin: 0 0 var(--space-2);
+    color: var(--color-text);
+  }
+
+  .project-meta span {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .project-content {
+    padding-top: var(--space-5);
+  }
+
+  @media (max-width: 800px) {
+    .project-header {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

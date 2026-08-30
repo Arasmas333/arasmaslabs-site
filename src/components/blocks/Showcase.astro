@@ -1,0 +1,96 @@
+---
+import Card from "../sub/Card.astro";
+import StatusBadge from "../sub/StatusBadge.astro";
+
+const projects = [
+  {
+    title: "Project Theseus",
+    description: "Development of the Nyx AI ecosystem.",
+    status: "Active",
+    variant: "active",
+    href: "/projects/theseus",
+  },
+  {
+    title: "Project Daedalus",
+    description: "Experiments, prototypes, and technical explorations.",
+    status: "Active",
+    variant: "active",
+    href: "/projects/daedalus",
+  },
+  {
+    title: "Project Hephaestus",
+    description: "Technology, craftsmanship, and the Forge Forward philosophy.",
+    status: "In Development",
+    variant: "development",
+    href: "/projects/hephaestus",
+  },
+];
+---
+
+<section class="showcase">
+  <div class="section-header">
+    <p class="eyebrow">PROJECTS</p>
+    <h2>What We're Building</h2>
+    <p>
+      Explore the active initiatives, experiments, and technologies
+      being developed within Arasmas Labs.
+    </p>
+  </div>
+
+  <div class="project-grid">
+    {projects.map((project) => (
+      <Card title={project.title} href={project.href}>
+        <StatusBadge
+          status={project.status}
+          variant={project.variant}
+        />
+
+        <p>{project.description}</p>
+      </Card>
+    ))}
+  </div>
+</section>
+
+<style>
+  .showcase {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .section-header {
+    max-width: 700px;
+    margin-bottom: var(--space-5);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+  }
+
+  .section-header > p:last-child {
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+
+  @media (max-width: 800px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

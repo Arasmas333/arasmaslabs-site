@@ -1,0 +1,56 @@
+---
+const {
+  label = "",
+  title,
+} = Astro.props;
+---
+
+<section class="project-section">
+  <header class="section-header">
+    {label && <p class="section-label">{label}</p>}
+    <h2>{title}</h2>
+  </header>
+
+  <div class="section-content">
+    <slot />
+  </div>
+</section>
+
+<style>
+  .project-section {
+    padding: var(--space-5) 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-3);
+  }
+
+  .section-label {
+    margin: 0 0 var(--space-1);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.75rem, 4vw, 3rem);
+    line-height: 1.1;
+  }
+
+  .section-content {
+    max-width: 800px;
+    color: var(--color-text-muted);
+  }
+
+  .section-content :global(p:first-child) {
+    margin-top: 0;
+  }
+
+  .section-content :global(p:last-child) {
+    margin-bottom: 0;
+  }
+</style>

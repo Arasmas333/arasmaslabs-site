@@ -1,0 +1,105 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts
+    .filter((post) => !post.data.draft)
+    .map((post) => ({
+      params: { slug: post.id },
+      props: { post },
+    }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<MainLayout title={`${post.data.title} | Arasmas Labs`}>
+  <main class="post-page">
+    <article>
+      <a class="back-link" href="/blog">
+  ← Back to Blog
+</a>
+      <header class="post-header">
+        <p class="post-date">
+          {post.data.pubDate.toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+
+        <h1>{post.data.title}</h1>
+
+        <p class="post-description">
+          {post.data.description}
+        </p>
+      </header>
+
+      <div class="post-content">
+        <Content />
+      </div>
+    </article>
+  </main>
+</MainLayout>
+
+<style>
+  .post-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .post-header {
+    margin-bottom: var(--space-5);
+    padding-bottom: var(--space-4);
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .post-date {
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .post-description {
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  .post-content {
+    color: var(--color-text);
+    line-height: 1.8;
+  }
+
+  .post-content :global(h2) {
+    margin-top: var(--space-5);
+  }
+
+  .post-content :global(p) {
+    margin: var(--space-3) 0;
+
+  }
+
+  .back-link {
+  display: inline-block;
+  margin-bottom: var(--space-4);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--color-accent);
+}
+</style>

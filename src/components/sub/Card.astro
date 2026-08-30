@@ -1,0 +1,46 @@
+---
+const { title = "", href = "" } = Astro.props;
+---
+
+<article class="card">
+  {href ? (
+    <a href={href} class="card-link">
+      <div class="card-content">
+        <slot />
+      </div>
+    </a>
+  ) : (
+    <div class="card-content">
+      <slot />
+    </div>
+  )}
+
+  {title && <h3>{title}</h3>}
+</article>
+
+<style>
+  .card {
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+
+  .card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .card-content {
+    padding: var(--space-3);
+  }
+
+  h3 {
+    margin: 0;
+    padding: 0 var(--space-3) var(--space-3);
+  }
+
+  .card:hover {
+    border-color: var(--color-accent);
+  }
+</style>

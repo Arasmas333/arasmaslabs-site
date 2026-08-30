@@ -1,0 +1,72 @@
+:root {
+  /* Colors */
+  --color-background: #0d0f10;
+  --color-surface: #15191b;
+  --color-surface-raised: #1c2124;
+
+  --color-gunmetal: #2a3033;
+  --color-silver: #b8bec2;
+  --color-brass: #9a7b4f;
+
+  --color-accent: #3fa9f5;
+  --color-accent-hover: #66bfff;
+
+  --color-text: #e6e9ea;
+  --color-text-muted: #9da5a9;
+  --color-border: #343b3f;
+
+  /* Typography */
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-heading: Arial, Helvetica, sans-serif;
+
+  /* Spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4rem;
+  --space-7: 6rem;
+
+  /* Layout */
+  --content-width: 1200px;
+  --page-padding: 1.5rem;
+
+  /* Shape */
+  --radius: 8px;
+  --border-width: 1px;
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-standard: 250ms ease;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

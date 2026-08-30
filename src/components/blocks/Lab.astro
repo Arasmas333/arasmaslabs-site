@@ -1,0 +1,102 @@
+---
+const experiments = [
+  {
+    title: "Experimental Systems",
+    description:
+      "Small-scale experiments exploring new ideas, technologies, and methods.",
+  },
+  {
+    title: "Technical Prototypes",
+    description:
+      "Early-stage hardware and software concepts developed through hands-on experimentation.",
+  },
+  {
+    title: "Open Builds",
+    description:
+      "Selected projects and builds documented for others to explore, reproduce, or extend.",
+  },
+];
+---
+
+<section class="lab">
+  <div class="section-header">
+    <p class="eyebrow">THE LAB</p>
+
+    <h2>Experiments in Progress</h2>
+
+    <p>
+      Not every idea becomes a project. Some become experiments,
+      prototypes, tools, or simply lessons worth preserving.
+    </p>
+  </div>
+
+  <div class="experiment-grid">
+    {experiments.map((experiment) => (
+      <article class="experiment">
+        <h3>{experiment.title}</h3>
+        <p>{experiment.description}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<style>
+  .lab {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+    border-top: var(--border-width) solid var(--color-border);
+  }
+
+  .section-header {
+    max-width: 700px;
+    margin-bottom: var(--space-5);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+  }
+
+  .section-header > p:last-child {
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+  }
+
+  .experiment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-3);
+  }
+
+  .experiment {
+    padding: var(--space-4);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+
+  .experiment h3 {
+    margin-top: 0;
+  }
+
+  .experiment p {
+    margin-bottom: 0;
+    color: var(--color-text-muted);
+  }
+
+  @media (max-width: 800px) {
+    .experiment-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

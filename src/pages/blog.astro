@@ -1,0 +1,126 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog"))
+  .filter((post) => !post.data.draft)
+  .sort(
+    (a, b) =>
+      b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+---
+
+<MainLayout title="Blog | Arasmas Labs">
+  <main class="blog-page">
+    <section class="blog-header">
+      <p class="eyebrow">ARASMAS LABS BLOG</p>
+      <h1>Notes from the Lab</h1>
+
+      <p>
+        Development logs, reflections, experiments, and lessons from the
+        ongoing work behind Arasmas Labs.
+      </p>
+    </section>
+
+    <section class="blog-list">
+      {posts.length === 0 ? (
+        <p class="empty-state">
+          No published posts yet.
+        </p>
+      ) : (
+        posts.map((post) => (
+          <article class="blog-card">
+            <p class="post-meta">
+              {post.data.pubDate.toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
+
+            <h2>
+              <a href={`/blog/${post.id}/`}>
+                {post.data.title}
+              </a>
+            </h2>
+
+            <p>
+              {post.data.description}
+            </p>
+          </article>
+        ))
+      )}
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .blog-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .blog-header {
+    max-width: 760px;
+    margin-bottom: var(--space-6);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .blog-header > p:last-child {
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  .blog-list {
+    display: grid;
+    gap: var(--space-3);
+  }
+
+  .blog-card {
+    padding: var(--space-4);
+    border: var(--border-width) solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-surface);
+  }
+
+  .post-meta {
+    margin: 0 0 var(--space-1);
+    color: var(--color-accent);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .blog-card h2 {
+    margin: 0 0 var(--space-2);
+  }
+
+  .blog-card h2 a {
+    color: var(--color-text);
+    text-decoration: none;
+  }
+
+  .blog-card h2 a:hover {
+    color: var(--color-accent);
+  }
+
+  .blog-card p:last-child,
+  .empty-state {
+    color: var(--color-text-muted);
+  }
+</style>

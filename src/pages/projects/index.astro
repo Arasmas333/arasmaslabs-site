@@ -1,0 +1,41 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Projects | Arasmas Labs">
+  <main class="projects-page">
+    <section>
+      <h1>Projects</h1>
+
+      <div class="project-list">
+        <a href="/projects/theseus">Project Theseus</a>
+        <a href="/projects/daedalus">Project Daedalus</a>
+        <a href="/projects/hephaestus">Project Hephaestus</a>
+      </div>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .projects-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .project-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+
+  .project-list a {
+    text-decoration: none;
+    color: var(--color-text);
+  }
+
+  .project-list a:hover {
+    color: var(--color-accent);
+  }
+</style>

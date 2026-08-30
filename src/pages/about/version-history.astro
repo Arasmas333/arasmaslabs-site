@@ -1,0 +1,191 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Version History | Arasmas Labs">
+  <main class="history-page">
+    <section class="history-header">
+      <p class="eyebrow">VERSION HISTORY</p>
+
+      <h1>Built in Iterations.</h1>
+
+      <p>
+        Arasmas Labs is developed as an evolving system. This page records
+        significant changes to the laboratory, its projects, its website,
+        and the infrastructure supporting them.
+      </p>
+    </section>
+
+    <section class="timeline">
+
+      <article class="version-entry">
+        <div class="version-meta">
+          <p class="version-number">v0.3</p>
+          <p class="version-date">August 2026</p>
+        </div>
+
+        <div class="version-content">
+          <h2>Launch Preparation</h2>
+
+          <p>
+            The Arasmas Labs website completed its first full design and
+            content pass in preparation for public launch.
+          </p>
+
+          <ul>
+            <li>Completed the visual and content polish for the primary site pages.</li>
+            <li>Added dedicated banner artwork for Projects Theseus, Daedalus, and Hephaestus.</li>
+            <li>Refined the shared navigation and project-page presentation.</li>
+            <li>Completed the About and Contact pages.</li>
+            <li>Published the first official Arasmas Labs blog posts.</li>
+            <li>Prepared the website for its first public deployment.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="version-entry">
+        <div class="version-meta">
+          <p class="version-number">v0.2</p>
+          <p class="version-date">August 2026</p>
+        </div>
+
+        <div class="version-content">
+          <h2>Development Infrastructure</h2>
+
+          <p>
+            Arasmas Labs entered active website development with a local
+            Astro development environment and a modular component-based
+            architecture.
+          </p>
+
+          <ul>
+            <li>Established the Astro development environment.</li>
+            <li>Implemented shared navigation, layout, and footer systems.</li>
+            <li>Created dedicated pages for Theseus, Daedalus, and Hephaestus.</li>
+            <li>Established reusable project landing-page architecture.</li>
+            <li>Implemented a functional blog publishing system.</li>
+            <li>Integrated Decap CMS for browser-based blog publishing.</li>
+            <li>Added support for drafts, images, and individual article pages.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="version-entry">
+        <div class="version-meta">
+          <p class="version-number">v0.1</p>
+          <p class="version-date">2026</p>
+        </div>
+
+        <div class="version-content">
+          <h2>Foundation</h2>
+
+          <p>
+            The initial Arasmas Labs framework was established as an umbrella
+            for independent technical development, experimentation, research,
+            and practical fabrication.
+          </p>
+
+          <ul>
+            <li>Established Arasmas Labs as the central project identity.</li>
+            <li>Defined Project Theseus around development of the Nyx AI ecosystem.</li>
+            <li>Defined Project Daedalus as the experimental research and development space.</li>
+            <li>Defined Project Hephaestus as the practical fabrication and business initiative.</li>
+            <li>Established the initial Arasmas Labs website architecture.</li>
+          </ul>
+        </div>
+      </article>
+
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .history-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .history-header {
+    max-width: 850px;
+    margin-bottom: var(--space-7);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .history-header > p:last-child {
+    max-width: 760px;
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  .timeline {
+    border-top: var(--border-width) solid var(--color-border);
+  }
+
+  .version-entry {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: var(--space-5);
+
+    padding: var(--space-5) 0;
+    border-bottom: var(--border-width) solid var(--color-border);
+  }
+
+  .version-meta p {
+    margin: 0;
+  }
+
+  .version-number {
+    color: var(--color-accent);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .version-date {
+    margin-top: 0.25rem !important;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+
+  .version-content {
+    max-width: 800px;
+  }
+
+  .version-content h2 {
+    margin-top: 0;
+  }
+
+  .version-content p,
+  .version-content li {
+    color: var(--color-text-muted);
+  }
+
+  .version-content ul {
+    padding-left: 1.25rem;
+  }
+
+  .version-content li + li {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 700px) {
+    .version-entry {
+      grid-template-columns: 1fr;
+      gap: var(--space-2);
+    }
+  }
+</style>

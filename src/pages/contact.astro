@@ -1,0 +1,92 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout title="Contact | Arasmas Labs">
+  <main class="contact-page">
+    <section class="contact-header">
+      <p class="eyebrow">CONTACT</p>
+      <h1>Get in Touch</h1>
+
+      <p>
+        For project inquiries, collaborations, technical questions,
+        or general contact regarding Arasmas Labs.
+      </p>
+    </section>
+
+    <section class="contact-info">
+  <h2>Email</h2>
+
+  <p>
+    The simplest way to reach Arasmas Labs is by email.
+  </p>
+
+  <a class="contact-link" href="mailto:contact@arasmaslabs.com">
+    contact@arasmaslabs.com
+  </a>
+
+  <p>
+    Future Dropbox to come.
+  </p>
+</section>
+  </main>
+</MainLayout>
+
+<style>
+  .contact-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .contact-header {
+    max-width: 760px;
+    margin-bottom: var(--space-6);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .contact-header > p:last-child {
+    margin-top: var(--space-3);
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    padding-top: var(--space-4);
+    border-top: var(--border-width) solid var(--color-border);
+  }
+
+  .contact-info h2 {
+    margin-top: 0;
+  }
+
+  .contact-info p {
+    color: var(--color-text-muted);
+  }
+
+  .contact-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  color: var(--color-accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+</style>

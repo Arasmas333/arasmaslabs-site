@@ -1,0 +1,71 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="footer-content">
+    <div>
+      <p class="brand">Arasmas Labs</p>
+      <p class="tagline">
+        Independent research, experimentation, and engineering.
+      </p>
+    </div>
+
+    <div class="footer-meta">
+      <p>© {new Date().getFullYear()} Arasmas Labs</p>
+      <p>All systems experimental.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-7);
+    border-top: var(--border-width) solid var(--color-border);
+  }
+
+  .footer-content {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-5) var(--page-padding);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .brand {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .tagline,
+  .footer-meta {
+    color: var(--color-text-muted);
+  }
+
+  .tagline {
+    margin: var(--space-1) 0 0;
+  }
+
+  .footer-meta {
+    text-align: right;
+    font-size: 0.85rem;
+  }
+
+  .footer-meta p {
+    margin: 0;
+  }
+
+  .footer-meta p + p {
+    margin-top: 0.25rem;
+  }
+
+  @media (max-width: 600px) {
+    .footer-content {
+      flex-direction: column;
+    }
+
+    .footer-meta {
+      text-align: left;
+    }
+  }
+</style>

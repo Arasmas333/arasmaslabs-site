@@ -1,0 +1,147 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+---
+
+<MainLayout title="About | Arasmas Labs">
+  <main class="about-page">
+    <section class="about-hero">
+      <p class="eyebrow">ABOUT ARASMAS LABS</p>
+
+      <h1>Independent Development, Research, and Experimentation.</h1>
+
+      <p class="intro">
+        Arasmas Labs is an independent laboratory built around the idea that
+        useful systems emerge through experimentation, iteration, and
+        deliberate refinement.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>What We Do</h2>
+
+      <p>
+        The lab develops technical projects, experimental systems, practical
+        tools, and small-scale research efforts across software, hardware,
+        artificial intelligence, fabrication, acoustics, and related fields. The lab functions as a pet project with this website being a main capture point for anything developed. 
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>How We Work</h2>
+
+      <p>
+        Projects are developed incrementally. Ideas are tested, documented,
+        refined, and expanded only when the next stage is justified by what
+        has already been learned.
+      </p>
+
+      <p>
+        We take a project idea, expand upon the idea until it becomes a physically capable prototype idea. We then stress test the idea until we find faults with it.
+
+      </p>
+
+      <p>
+        When an idea has been proven to be viable, we then move to a prototyping phase for actual development. After a successful prototype, we move to launch and production.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Current Projects</h2>
+
+      <p>
+        The current project portfolio centers on Project Theseus, Project
+        Daedalus, and Project Hephaestus.
+      </p>
+
+      <p>
+        Project Theseus is a software ecosystem built around the Nyx AI
+        framework. Nyx is a modular, multi-agent AI system designed to support a wide range of 
+        applications, from research and development to practical problem-solving.
+      </p>
+
+      <p>
+        Project Daedalus is a collection of experimental prototypes, technical
+        explorations, and research efforts. It serves as a proving ground and sandbox
+        for new ideas, concepts, and technologies.
+      </p>
+
+      <p>
+        Project Hephaestus is a practical fabrication and business initiative
+        focused on the development of tools, systems, and products that can be
+        used to support the Lab's ongoing work and to provide value to the broader community.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Version History</h2>
+
+      <p>
+        Major milestones and changes across Arasmas Labs are preserved in the
+        project version history.
+      </p>
+
+      <a class="version-link" href="/about/version-history">
+        View Version History
+      </a>
+    </section>
+  </main>
+</MainLayout>
+
+<style>
+  .about-page {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: var(--space-7) var(--page-padding);
+  }
+
+  .about-hero {
+    max-width: 900px;
+    margin-bottom: var(--space-7);
+  }
+
+  .eyebrow {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .intro {
+    max-width: 760px;
+    margin-top: var(--space-4);
+    color: var(--color-text-muted);
+    font-size: 1.2rem;
+  }
+
+  .about-section {
+    max-width: 800px;
+    padding: var(--space-5) 0;
+    border-top: var(--border-width) solid var(--color-border);
+  }
+
+  .about-section h2 {
+    margin-top: 0;
+  }
+
+  .about-section p {
+    color: var(--color-text-muted);
+  }
+
+  .version-link {
+    display: inline-block;
+    margin-top: var(--space-2);
+    color: var(--color-accent);
+    text-decoration: none;
+  }
+
+  .version-link:hover {
+    text-decoration: underline;
+  }
+</style>
