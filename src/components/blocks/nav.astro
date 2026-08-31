@@ -321,6 +321,7 @@
   .projects-button {
     min-height: 48px;
     justify-content: flex-start;
+    gap: 0.65rem;
     padding: 0.75rem 0;
   }
 
@@ -329,7 +330,12 @@
   .projects-button img,
   .blog-nav-link img,
   .contact-nav-link img {
-    display: none;
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 
   .projects-dropdown {
@@ -343,12 +349,18 @@
 
   .projects-dropdown a {
     min-height: 44px;
+    gap: 0.65rem;
     padding: 0.6rem 0;
     white-space: normal;
   }
 
   .projects-dropdown img {
-    display: none;
+    display: block;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    object-fit: contain;
+    flex-shrink: 0;
   }
 }
 </style>
