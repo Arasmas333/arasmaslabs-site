@@ -18,7 +18,7 @@ We ran into our chat limitations almost immediately into building the first few 
 
 But I had already spent money to reserve the domain name, so what was a little more? So I took things a step further.
 
-I upgraded GPT to pro.  GPT seemed to have the most severe limitations for free users. But Gemini remains functional through multiple iterations of images and project ideas that immediately were put into incubation for Project Daedalus to expand upon later. We have yet to hit any kind of rolling limit with Gemini even after building out concept art for the entire website. But upgrading GPT to pro has also allowed me to make the most of Gemini as well.
+I upgraded GPT to a plus subscription. GPT seemed to have the most severe limitations for free users. But Gemini remains functional through multiple iterations of images and project ideas that immediately were put into incubation for Project Daedalus to expand upon later. We have yet to hit any kind of rolling limit with Gemini even after building out concept art for the entire website. But upgrading GPT to plus has also allowed me to make the most of Gemini as well.
 
 Functionally, I use Gemini to track financials, do research, and do iterative image generation from art I can throw together. I’ve been building all the logos and symbols based on one core piece of artwork that I created many years prior in GIMP.
 

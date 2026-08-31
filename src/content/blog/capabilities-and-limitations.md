@@ -9,10 +9,10 @@ It’s been two weeks since I started using AI as a multi-agent workshop and rig
 At the time of writing, the blog is currently living in my notes. Once it’s published for the world to see, my weeks in review will all be shared all at once. The plan this weekend was to get Astro and VS Code set up for the coding exercises I would be doing to teach myself, but current circumstances and mostly puppies derailed this week’s plan. All is not lost though. A lot got done, and while the Arasmas Labs website is currently under construction, we still managed to direct our energy towards constructing our three main Projects.
 
 This week was a little bit different than last week. Last week, we got our first taste of AI and saw what it could do with some light architecture. We managed to put together a webpage and learn a little bit of HTML coding. Great. This week, we pushed the capabilities in a more broad direction. And discovered some limitations in the process.
-I started this week with ChatGPT and constantly pushed my free tier limits. Thankfully, ChatGPT is built more as an architectural machine so it’s really good with language. I can just type whatever I want and it always generates a very detailed response (unless you put on the guard rails and ask for shorter responses, of course). And I usually only hit my free tier limits from too many attachments or artifact generation. Otherwise, it’s still very functional for architecture and organization even with its intelligence throttled.
+I started this week with ChatGPT and constantly pushed my free tier limits. Thankfully, ChatGPT is built more as an architectural machine so it’s really good with language. I can just type whatever I want and it always generates a very detailed response (unless you put on the guard rails and ask for shorter responses, of course). And I usually only hit my free tier limits from too many attachments or artifact generations. Otherwise, it’s still very functional for architecture and organization even with its intelligence throttled.
 But the limits seemed to trigger a lot, so I needed an alternative. Especially with how much I was trying to do with images.
 
-Queue Gemini. I like the Google workspace. A lot of people use gmail. So why not try Gemini? And so I my an account using my gmail and dove right in with the first obvious questions I could ask it:
+Queue Gemini. I like the Google workspace. A lot of people use gmail. So why not try Gemini? And so I made an account using my gmail and dove right in with the first obvious questions I could ask it:
 
 “What are you capable of?”
 
@@ -42,7 +42,7 @@ The recommendation was Claude.
 
 So we added Claude to our suite of tools.
 
-Claude is… Concise to say the least. I had already planned the architecture of website out with GPT and being a small version 1, figured it was okay to continue that route. But I like how concise Claude is. It’s not as verbose as GPT. And while at the start of the journey, I didn’t know quite a thing about coding, I knew from my other sources that Claude was going to be it.
+Claude is… Concise to say the least. I had already planned the architecture of website out with GPT and, it being a small version 1, figured it was okay to continue that route. But I like how concise Claude is. It’s not as verbose as GPT. And while at the start of the journey, I didn’t know quite a thing about coding, I knew from my other sources that Claude was going to be it.
 But even it recommended I start with the same suite of standard tools that GPT did. Claude is supposed to be a coding powerhouse. But I used it primarily to establish the guardrails of my projects with the pdf artifacts I created. We haven’t done much with it yet. But as I build the site, I plan on feeding every piece GPT gives me into Claude
 
 JUST TO SEE HOW IT WORKS
@@ -52,7 +52,7 @@ Because that’s just what kind of person I am. I don’t want to just “vibe c
 But I needed a direction. Arasmas Labs and the overarching website were great ideas and have very humble beginnings. But I couldn’t learn to code with just a website alone.
 
 I already had two overarching Projects I planned to bring to the website. Namely Project Theseus and Project Hephaestus. An AI project and a business initiative respectively. But things felt incomplete. I needed a space for ideas to be born.
-And thus Project Daedalus was created. Naming conventions are my favorite in this regard. But Daedalus was to be vastly different idea. If the theme of Theseus was modularity and an idea of “from many, one,” and the theme of Hephaestus was craftsmanship and the idea of “from one to many,” then Daedalus could only logically point to innovation and the idea of “from one, many.”
+And thus Project Daedalus was created. Naming conventions are my favorite in this regard. But Daedalus was to be a vastly different idea. If the theme of Theseus was modularity and an idea of “from many, one,” and the theme of Hephaestus was craftsmanship and the idea of “from one to many,” then Daedalus could only logically point to innovation and the idea of “from one, many.”
 We turned again to Gemini. And we prompted it for ideas for projects that would make coding fun for me. The ideas were generic and very detailed at first, but ultimately, with iterative expansion, we were able to create a plethora of ideas in order of difficulty to make coding a fun journey for me.
 
 And I think that was the key to all of this. Two weeks ago, I started using AI to help me find a job and now I’m planning my own one man business venture. Why? Because it’s fun. And most importantly, I’m having fun getting my thoughts organized, getting them out of my head, and freeing up space for more thinking. It’s harder to do that with pen and paper and no assistance. AI has streamlined it.
@@ -73,7 +73,7 @@ But the fact that I’m approaching all of this as an experiment and I keep aski
 
 AI satisfies that monkey brain desire. We push an input, we get an output, it simulates true response. It gives real feedback. Dopamine satisfied. Sometimes it doesn’t always get things right and definitely needs more structure and guardrails.
 
-But the more you tell it what to do and the longer you work with it, the easier it makes using it. Sure you need to be a little tech savvy to understand what it’s doing exactly. But a little education and little experimentation goes a long way.
+But the more you tell it what to do and the longer you work with it, the easier it makes using it. Sure you need to be a little tech savvy to understand what it’s doing exactly. But a little education and a little experimentation goes a long way.
 
 This week in hindsight wasn’t one filled with a lot of hands-on work, but we did accomplish a lot of structuring and branding for a lot of different projects and ideas. We now have 3 flagship umbrella Projects to present on the website. Arasmas Labs has a clearer direction than it did before. And I remain committed to the one man show.
 
